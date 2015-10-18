@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Flight">
+    <meta name="author" content="Flight">
+
+    <title>{% block title %}Flight - Minutes and Agendas Made Easy{% endblock %}</title>
+
+    <!--Modal Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  {% load staticfiles %}
+    <!-- Bootstrap Core CSS -->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+    <!-- Custom CSS -->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/master.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/home.css' %}">
+
+    <!-- Custom Fonts -->
+    <link type="text/css" rel="stylesheet"  href="{% static 'fonts/arvo/arvo.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'fonts/mont/stylesheet.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+     <link href="fonts/stylesheet.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<header class="intro">
+<!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+         {% load staticfiles %}
+                   <img src="{% static "img/logo-head.png" %}">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a href="Log in">Support</a>
+                    </li>
+                    <li>
+                        <a href="Log in">FAQ</a>
+                    </li>
+                     <li>
+                        <a href="Log in">Contact</a>
+                    </li>
+
+                    <li class="bold">
+                        <a href="#" data-toggle="modal" data-target="#login">Log In</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="splash"></div>
+                        <h1>Streamline your meetings with Flight.</h1>
+                            <div class ="button">
+                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#register">Register for Free</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</header>
+
+<!--Register Modal-->
+<div id="register" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>Register for Free</h1>
+        </div>
+    <div class="modal-body">
+         <form method="POST">{% csrf_token %}
+     {{ register_form.as_p }}
+	 {{ register_form.errors }}
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-default" data-dismiss="modal">Submit</button>
+        <button type="submit" class="btn btn-default" data-dismiss="modal">Sign up using Gmail</button>
+        <button type="submit" class="btn btn-default" data-dismiss="modal">Sign up using </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Log in-->
+<div id="login" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h1>Log in</h1>
+      </div>
+      <div class="modal-body">
+          <label for="usr">Username:</label>
+          <input type="text" class="form-control" id="usr">
+         <label for="usr">Password:</label>
+          <input type="text" class="form-control" id="usr">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Forgot Password</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Login</button>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    <!--INFORMATION ABOUT PRODUCT-->
+
+     <section id="info" class="info-section">
+        <div class="container">
+             <div class="row">
+                <div class="col-sm-4 portfolio-item">
+
+                                <h1>Stuff Here</h1>
+                        <img src="img/app/cover.jpg" class="img-responsive" alt="">
+
+                </div>
+            </div>
+    </section>
+
+         <!--footer-->
+<section id="footer" class="footer-section">
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h1>Site Map</h1>
+
+                        <p>Link 1</p>
+                                                <p>Link 1</p>
+
+                                                <p>Link 1</p>
+
+                                                <p>Link 1</p>
+
+                                                <p>Link 1</p>
+
+                    </div>
+
+                    <div class="footer-col col-md-4">
+                        <h1>Site Map</h1>
+
+                        <p>Link 1</p>
+                                                <p>Link 1</p>
+
+                                                <p>Link 1</p>
+
+                                                <p>Link 1</p>
+
+                                                <p>Link 1</p>
+
+                    </div>
+
+                    <div class="footer-col col-md-4">
+                        <h1>Site Map</h1>
+
+                        <p>Link 1</p>
+                                                <p>Link 1</p>
+
+                                                <p>Link 1</p>
+
+                                                <p>Link 1</p>
+
+                                                <p>Link 1</p>
+
+                    </div>
+
+                    <div class="footer-col col-md-4">
+                        <p>Copyright Info etc.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</section>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/js/bootstrap.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+
+/*------------NAVIGATION----------*/
+
+li.bold{
+    font-family:'montserratbold', sans-serif;
+}
+
+
+.navbar img{
+    margin-top:-15px;
+    width:50%;
+}
+
+.navbar-custom {
+    margin-top:20px;
+    position: absolute;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    font-family:'montserratlight' sans-serif;
+}
+
+.navbar-custom .navbar-brand:focus {
+    outline: 0;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle:focus,
+.navbar-custom .navbar-brand .navbar-toggle:active {
+    outline: 0;
+}
+
+.navbar-custom a {
+    color: black;
+}
+
+.navbar-custom .nav li a {
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.navbar-custom .nav li a:hover {
+    outline: 0;
+    color: #39AECF;
+    background-color: transparent;
+}
+
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:active {
+    outline: 0;
+    background-color: transparent;
+}
+
+.navbar-custom .nav li.active {
+    outline: 0;
+}
+
+.navbar-custom .nav li.active a {
+    color:black;
+    background-color: white;
+}
+
+.navbar-custom .nav li.active a:hover {
+    color: black;
+}
+
+@media(min-width:768px) {
+    .navbar-custom {
+        padding: 20px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        padding: 0;
+        border-bottom: 1px solid rgba(255,255,255,.3);
+        background: #000;
+    }
+
+.navbar img{
+    width:75%;
+}
+}
+
+
+@media(max-width:767px) {
+.navbar img{
+    margin-top:-15px;
+    width:100%;
+}
+}
+
+
+/*---------BUTTON--------*/
+
+
+.button{
+    padding-top:8%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 20px;
+  margin-bottom: 0;
+  font-family: 'montserratbold';
+  color: white;
+  font-size: 150%;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #39AECF;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.btn:hover{
+  color: white;
+background-color: #216477;
+
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+
+}
+
+
+
+
+/*------------MAIN PAGE----------*/
+
+
+/*LANDING*/
+
+.intro {
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height:200px;
+    text-align: center;
+    background-image: url('../img/splash.jpg');
+    background-position:fixed;
+    z-index:0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.intro .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.intro h1 {
+    font-size:400%;
+    color:white;
+	text-shadow: 2px 2px 8px #000000;
+
+}
+
+.intro p {
+    color:black;
+    font-size:200%;
+	text-shadow: 2px 2px 8px #000000;
+
+}
+        
+        
+        
+        
+/*MEDIA QUERIES FOR MAIN PAGE*/
+
+@media(min-width:768px) {
+    .intro {
+        height: 100%;
+        padding: 0;
+    }
+
+    .intro .intro-body .brand-heading {
+        font-size: 4em;
+    }
+
+    .intro .intro-body .intro-text {
+        font-size: 1.5em;
+    }
+}
+
+
+
+/*REGISTER MODAL*/
+
+.modal-content {
+    margin-top:50%;
+}
+
+
+.modal-content h1{
+    font-size:200%;
+}
+
+
+.modal-content .btn {
+  display: inline-block;
+  padding: 10px;
+  margin-bottom: 0;
+  font-family: 'montserratbold';
+  color: white;
+  font-size: 100%;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #39AECF;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+
+@media(max-width:768px) {
+.modal-content .btn {
+width:100%;
+margin-top:10px;
+    vertical-align:center;
+}
+}
+
+
+
+/*BOTTOM*/
+
+.info-section{
+    padding-top:100px;
+    height:100%;
+    padding-bottom:10%;
+}
+
+
+/*FOOTER*/
+
+
+footer h1 {
+    text-align: left;
+
+    color:white;
+}
+
+footer p{
+    font-size:80%;
+    color:white;
+    text-align: left;
+}
+
+footer .footer-above {
+	    color:white;
+    background-color: black;
+}
+
+footer .footer-col {
+    margin-bottom: 50px;
+}
+
+footer .footer-below {
+    padding: 15px 0;
+}
+
+
+
