@@ -15,6 +15,8 @@ class UserAdmin(admin.ModelAdmin):
     class Meta:
         model = User
 
+# lolcool
+
 class UserInline(admin.StackedInline):
     model = User
 
